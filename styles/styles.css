@@ -1,0 +1,85 @@
+:root{
+    --title: #0f1419;
+    --p: #262b2f;
+    --p-secondary: #63727e;
+    --primary: #1d9bf0;
+    --bck-white: #ffffff;
+    --hover: #dee5e9;
+    /* sizes */
+    --sm:14px;
+    --md:16px;
+    --lg:20px;
+    /* border */
+    --circle: 50%;
+}
+/* gral rules */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 62.5%;
+}
+body{
+    font-size: 1rem;
+    background-color: var(--bck-white);
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+/* shared rules*/
+body, main{
+    height: 100vh;
+}
+.menu-top, .title-btn-ctr{
+    display: flex;
+}
+.menu-top, main{
+    width: 100%;
+}
+/* specific rules */
+.menu-top{
+    padding: 0 1rem;
+    height: 6rem;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    backdrop-filter: blur(10px);
+}
+.menu-top .icon img{
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: var(--circle);
+}
+.title-btn-ctr{
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+}
+.title-btn-ctr h1{
+    font-size: var(--md);
+}
+.title-btn-ctr a{
+    padding: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+}
+.title-btn-ctr a:hover{
+    background-color:var(--hover);
+    border-radius: var(--circle);
+    text-align: center;
+    transition-property: background-color;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in;
+}
+main{
+    margin: 4rem 0;
+    max-width: 60rem;
+}
+
