@@ -2,6 +2,8 @@
     --title: #0f1419;
     --p: #262b2f;
     --p-secondary: #63727e;
+    --menu-options: #536471;
+    --outline-img: #f7f9f9;
     --primary: #1d9bf0;
     --bck-white: #ffffff;
     --hover: #dee5e9;
@@ -32,30 +34,40 @@ a{
 ul{
     list-style: none;
 }
+img{
+    object-fit: cover;
+    border-radius: var(--circle);
+}
+button{
+    cursor: pointer;
+    background: none;
+    border: none;
+}
 /* shared rules*/
 body, main{
     height: 100vh;
 }
-.menu-top, .title-btn-ctr{
+.menu-top, .title-btn-ctr, .icon-ctr, .content-ctr, .links-ctr, .reactions-ctr, .reactions-ctr button, .bottom-menu, .opts-menu, .opts-list, .opts-list li button{
     display: flex;
 }
-.menu-top, main{
+.menu-top, main, .card-ctr, .links-ctr, .main-content-ctr, .reactions-ctr, .main-content-ctr img, .bottom-menu, .opts-menu, .opts-list, .opts-list li button, .cancel-btn{
     width: 100%;
 }
-/* specific rules */
-.menu-top{
+.menu-top, .bottom-menu{
     padding: 0 1rem;
     height: 6rem;
     justify-content: space-around;
     align-items: center;
     position: fixed;
+}
+/* specific rules */
+.menu-top{
+    top: 0;
     backdrop-filter: blur(10px);
 }
 .menu-top .icon img{
     width: 3rem;
     height: 3rem;
-    object-fit: cover;
-    border-radius: var(--circle);
 }
 .title-btn-ctr{
     width: 80%;
@@ -82,4 +94,154 @@ main{
     margin: 4rem 0;
     max-width: 60rem;
 }
+/* cards */
+.card-ctr{
+    padding: 1.2rem 0;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto 2fr;
+    border-bottom: 1px solid var(--outline-img);
 
+}
+.icon-ctr{
+    padding:1rem 0;
+    width: 7rem;
+    justify-content: center;
+}
+.icon-card img{
+    width: 4rem;    
+    height: 4rem;
+    border-radius: var(--circle);
+}
+.links-ctr{
+    padding-right: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.links-ctr a{
+    /* overflow-wrap: break-word; */
+    /* max-width: 2rem; */
+    font-size: var(--sm);
+    color: var(--menu-options);
+}
+.links-ctr a:first-child{
+    font-weight:700;
+    color: var(--title);
+}
+.menu-dots svg{
+    width: 2rem;
+    fill: var(--menu-options);
+}
+.content-ctr{
+    padding-right: 2rem;
+    flex-direction: column;
+    gap: 1rem;
+}
+.content-ctr p{
+    font-size: var(--md);
+}
+.main-content-ctr{
+    height: 100%;
+}
+.main-content-ctr img{
+    height: 20rem;
+    max-width:100%;
+    max-height:100%;
+    outline: 1px solid var(--outline-img);
+    border-radius: 3rem;
+}
+.main-content-ctr figcaption{
+    font-size: var(--sm);
+    color: var(--p-secondary);
+}
+.main-content-ctr figcaption a{
+    font-weight: 600;
+    color: var(--p);
+}
+.reactions-ctr{
+    justify-content: space-between;
+}
+.reactions-ctr button{
+    width: 6rem;
+    height: 2rem;
+    justify-content: space-evenly;
+    align-items: center;
+    background: none;
+    border: none;
+    color: var(--p-secondary);
+}
+.reactions-ctr button:hover{
+    cursor: pointer;
+}
+.reactions-ctr button svg{
+    width: 2rem;
+    height: 2rem;
+    fill: var(--p-secondary);
+}
+/* menu bottom */
+.bottom-menu{
+    bottom: 0;
+    background-color: var(--bck-white);
+    border-top: 1px solid var(--outline-img);
+}
+.bottom-menu button svg{
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: var(--p);
+}
+.bottom-menu .fxd-btn{
+    width: 6rem;
+    height: 6rem;
+    position: fixed;
+    bottom: 8rem;
+    right: 2rem;
+    background: var(--primary);
+    border-radius: var(--circle);
+    box-shadow: 0px 1px 4px 1px var(--outline-img);
+}
+.bottom-menu .fxd-btn svg{
+    fill: var(--bck-white);
+}
+/* options menu */
+.opts-menu{
+    padding:2rem 3rem 5rem;
+    height: 60%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--bck-white);
+    border-radius: 6rem;
+    position: fixed;
+    bottom: -2rem;
+    z-index: 2;
+}
+.opts-list{
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.opts-list li button{
+    justify-content: space-around;
+}
+.opts-list li button span svg{
+    width: 2rem;
+    fill: var(--p-secondary);
+}
+.opts-list .txt{
+    padding-left: 2rem;
+    width: 98%;
+    font-size: var(--sm);
+    text-align: start;
+}
+.opts-menu .cancel-btn{
+    margin-top: 1rem;
+    padding: 1rem 0;
+    font-size: var(--sm);
+    font-weight: 700;
+    border:1px solid var(--hover);
+    border-radius: 3rem;
+}
+
+@media (min-width: 540px) {
+    
+}
