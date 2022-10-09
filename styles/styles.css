@@ -3,7 +3,7 @@
     --p: #262b2f;
     --p-secondary: #63727e;
     --menu-options: #536471;
-    --outline-img: #f7f9f9;
+    --outline-img: #d5d8d8d0;
     --primary: #1d9bf0;
     --primary-h: #1789d4ed;
     --bck-white: #ffffff;
@@ -45,6 +45,10 @@ button{
     background: none;
     border: none;
 }
+select{
+    background: none;
+    border:none;
+}
 /* shared rules*/
 .menu-top, .new-tweet-ctr, .title-btn-ctr, .icon-ctr, .content-ctr, .links-ctr, .reactions-ctr, .reactions-ctr button, .bottom-menu, .bottom-menu-list, .opts-menu, .opts-list, .opts-list li button{
     display: flex;
@@ -84,7 +88,7 @@ button{
     width: 3rem;
     height: 3rem;
 }
-.title-btn-ctr a:hover, .aside-menu .lists-ctr ul li button:hover{
+.title-btn-ctr a:hover, .aside-menu .lists-ctr ul li button:hover, .multimedia-btns ul li:hover{
     background-color:var(--hover);
     border-radius: var(--circle);
     text-align: center;
@@ -362,12 +366,105 @@ main{
         height: 6rem;
     }
     /* input header */
-    .input-icon-ctr{
-        width: 6rem;
-        height: 6rem;
+    .new-tweet-ctr, .what-r-u-thinking-ctr{
+        display: block;
     }
-    
+    .input-icon-ctr{
+        width: 8rem;
+        display: flex;
+        justify-content: center;
+    }
+    .input-sctn{
+        display: flex;
+    }
     .input-icon-ctr figure, .input-icon-ctr figure img{
-        height: 100%;
+        width: 5rem;
+        height: 5rem;
+    }
+    .input-ctr{
+        padding: 0 1rem;
+        width: 100%;
+    }
+    .what-r-u-thinking-ctr{
+        padding-bottom: 1rem;
+    }
+    .what-r-u-thinking-ctr .thinking{
+        padding: 2rem 1rem;
+        width: 100%;
+        font-size: var(--lg);
+        font-weight:lighter;
+        color:var(--p-secondary);
+        background:none;
+        border: none;
+        outline: none;
+    }
+    .what-r-u-thinking-ctr .select-ctr{
+        padding: 0.5rem;
+        width: fit-content;
+        display: flex;
+        border-radius: 3rem;
+    }
+    .what-r-u-thinking-ctr .select-ctr:hover, .what-r-u-thinking-ctr .audience:hover{
+        background-color: var(--hover);
+        transition-property: background-color;
+        transition-duration: 300ms;
+        transition-timing-function: ease-in;
+    }
+    .what-r-u-thinking-ctr .select-ctr span{
+        width: 1.5rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .what-r-u-thinking-ctr .select-ctr span svg{
+        fill: var(--primary);
+    }
+    .what-r-u-thinking-ctr .audience, .what-r-u-thinking-ctr .select-ctr .answers{
+        border-radius: 3rem;
+        color: var(--primary);
+        font-weight: bold;
+    }
+    .what-r-u-thinking-ctr .audience{
+        padding: 0.3rem;
+        width: 8rem;
+        border: 1px solid var(--hover);
+    }
+    .what-r-u-thinking-ctr .answers{
+        appearance:none;
+        -moz-appearance:none; /* Firefox */
+        -webkit-appearance:none; /* Safari and Chrome */
+    }
+    .multimedia-btns, .multimedia-btns ul{
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    .multimedia-btns{
+        padding: 1rem 0;
+        border-top: 1px solid var(--hover);
+        border-bottom: 1px solid var(--hover);
+    }
+    .multimedia-btns ul{
+        padding: 0;
+    }
+    .multimedia-btns ul li{
+        padding: 1rem;
+    }
+    .multimedia-btns ul li a svg{
+        width:  2rem;
+        height: 2rem;
+        fill: var(--primary);
+    }
+    .multimedia-btns button{
+        padding: 1rem 2rem;
+        font-size: var(--md);
+        font-weight: 700;
+        background-color: var(--primary);
+        color: var(--bck-white);
+        opacity: 0.6;
+        border-radius: 4rem;
+    }
+    .multimedia-btns button::after{
+        opacity: 1;
     }
 }
