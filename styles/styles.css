@@ -7,6 +7,7 @@
     --primary: #1d9bf0;
     --primary-h: #1789d4ed;
     --bck-white: #ffffff;
+    --bck-secondary: #eff3f4;
     --hover: #dee5e9;
     /* sizes */
     --sm:14px;
@@ -40,6 +41,12 @@ img{
     object-fit: cover;
     border-radius: var(--circle);
 }
+input{
+    color:var(--p-secondary);
+    background:none;
+    border: none;
+    outline: none;
+}
 button{
     cursor: pointer;
     background: none;
@@ -63,7 +70,7 @@ select{
     align-items: center;
     position: fixed;
 }
-.input-sctn{
+.input-sctn, .searcher-ctr{
     display: none;
 }
 /* specific rules */
@@ -115,7 +122,7 @@ select{
 }
 main{
     margin: 4rem 0;
-    max-width: 60rem;
+    /* max-width: 60rem; */
 }
 /* cards */
 .card-ctr{
@@ -304,8 +311,8 @@ main{
     }
     .menu-top{
         /* width: -moz-available; */
-        width: 83.5vw;
-        max-width: 60rem;
+        width: 80%;
+        max-width:59.8rem;
     }
     .menu-top .icon img{
         display: none;
@@ -314,15 +321,24 @@ main{
         width: 100%;
     }
     .new-tweet-ctr {
-        margin-top: 4rem;
-      }
+        margin-top: 6rem;
+    }
     main{
-        margin:2rem 0 2rem 10rem;
+        /* margin: 0 10%; */
+        position: relative;
+        left: 10%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .main-ctr{
+        /* width: 80%; */
+        max-width: 60rem;
+        border-left: 1px solid var(--outline-img);
+        border-right: 1px solid var(--outline-img);
     }
     .aside-menu{
         padding-top: 2rem;
-        width:10rem;
-        max-width: 20rem;
+        max-width:20%;
         height: 100%;
         flex-shrink: 0;
         position: fixed;
@@ -330,9 +346,9 @@ main{
         top: 0;
         justify-content: space-between;
         flex-direction: column;
+        align-items: center;
         grid-column: 1;
         grid-row: 1;
-        border-right: 1px solid var(--outline-img);
     }
     .tablet{
         display: flex;
@@ -350,6 +366,7 @@ main{
     }
     .bottom-menu-list{
         flex-direction: column;
+        align-items: center;
     }
     .bottom-menu-list li button{
         margin-bottom: 1rem;
@@ -396,10 +413,7 @@ main{
         width: 100%;
         font-size: var(--lg);
         font-weight:lighter;
-        color:var(--p-secondary);
-        background:none;
-        border: none;
-        outline: none;
+       
     }
     .what-r-u-thinking-ctr .select-ctr{
         padding: 0.5rem;
@@ -469,5 +483,44 @@ main{
     }
     .multimedia-btns button::after{
         opacity: 1;
+    }
+}
+@media (min-width:600px) and (max-width:1100px) {
+    .bottom-menu-list{
+        align-items: flex-end;
+    }
+    .aside-icon{
+        align-self: flex-end;
+
+    }
+}
+@media (min-width:1005px){
+    .searcher-ctr{
+        padding: 0 2rem;
+        display: block;
+        position: relative;
+        right: 0;
+        max-width: 20%;
+    }
+    .searcher-nav, .trending, .follow{
+        margin-top: 2rem;
+        background-color:var(--bck-secondary);
+        border-radius: 2rem;
+    }
+    .searcher-nav label{
+        padding: 1rem 2rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .searcher-nav span svg{
+        width: 2rem;
+        height: 2rem;
+        fill: var(--p-secondary);
+    }
+    .searcher{
+        padding-left: 1rem;
+        font-size: var(--md);
     }
 }
