@@ -313,6 +313,9 @@ main{
     .title-btn-ctr{
         width: 100%;
     }
+    .new-tweet-ctr {
+        margin-top: 4rem;
+      }
     main{
         margin:2rem 0 2rem 10rem;
     }
