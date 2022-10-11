@@ -537,7 +537,11 @@ main{
         font-size: var(--md);
         color: var(--p);
     }
-    /* trendings card */
+    .trending{
+        overflow: clip;
+        border-end-end-radius:   2rem;
+        border-end-start-radius: 2rem;
+    }
     .trending > span{
         width: 100%;
         display: inline-block;
@@ -546,10 +550,14 @@ main{
     }
     .trend-cards{
         cursor: pointer;
+        
+    }
+    .trend-cards li{
+        position: relative;
     }
     .trend-cards li .info-ctr{
         width: 100%;
-        height: 4rem;
+        height: auto;
         display: flex;
         flex-direction: column;
         
@@ -564,11 +572,14 @@ main{
     }
     .trend-cards li button{
         padding: 1rem;
-        position: relative;
-        top: 1rem;
-        right: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
     }
     .trend-cards li button span svg{
         width: 2rem;
+    }
+    .trend-cards .show-more a{
+        text-align: start;
     }
 }
