@@ -70,7 +70,7 @@ select{
     align-items: center;
     position: fixed;
 }
-.input-sctn, .searcher-ctr{
+.input-sctn, .searcher-ctr, .bottom-menu .lists-ctr .bottom-menu-list li button span, .hashtag, .profile-card .user-data, .profile-card button{
     display: none;
 }
 .icon-card img, .f-cards-icon img{
@@ -112,7 +112,7 @@ select{
     width: 3rem;
     height: 3rem;
 }
-.title-btn-ctr a:hover, .aside-menu .lists-ctr ul li button:hover, .multimedia-btns ul li:hover, .trend-cards li button:hover{
+.title-btn-ctr a:hover, .aside-menu .lists-ctr ul li button:hover, .multimedia-btns ul li:hover, .trend-cards li button:hover, .profile-card:hover{
     background-color:var(--hover);
     border-radius: var(--circle);
     text-align: center;
@@ -223,7 +223,7 @@ main{
     justify-content: space-around;
     align-items: center;
 }
-.tablet{
+.tablet, .hashtag svg:last-child{
     display: none;
 }
 .bottom-menu .lists-ctr{
@@ -354,6 +354,7 @@ main{
         grid-row: 1;
         border: none;
     }
+   
     .tablet{
         display: flex;
     }
@@ -508,6 +509,42 @@ main{
     }
 }
 @media (min-width:1005px){
+    .hashtag svg:first-child, .lists-ctr .bottom-menu-list .fxd-btn .blue-btn > svg{
+        display: none;
+    }
+    .hashtag svg:last-child, .lists-ctr .bottom-menu-list .fxd-btn .blue-btn > span, .bottom-menu .lists-ctr .bottom-menu-list li button span, .hashtag, .profile-card .user-data, .profile-card button{
+        display: flex;
+    }
+    .selected{
+        font-weight: 700;
+    }
+    .lists-ctr .bottom-menu-list li button{
+        padding: 1rem 2rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 2rem;
+        font-size: var(--md);
+    }
+    .aside-menu .lists-ctr ul li button:hover, .profile-card:hover{
+        border-radius: 4rem;
+    }
+    .bottom-menu-list {
+        align-items: flex-start;
+    }
+    .fxd-btn, .blue-btn{
+        width: 100%;
+    }
+    .aside-menu .lists-ctr .bottom-menu-list .fxd-btn .blue-btn{
+        margin-top: 1rem;
+        margin-bottom: 0;
+        padding: 1rem 2rem;
+        width: 100%;
+        height: 5rem;
+        font-weight: 700;
+        color: var(--bck-white);
+        border-radius: 3rem;
+    }  
     .main-ctr{
         max-width: 60rem;
     }
@@ -591,26 +628,44 @@ main{
         font-weight: 700;
         color: var(--p);
     }
-    .trend-cards li button{
+    .trend-cards li button, .profile-card > button {
         padding: 1rem;
         position: absolute;
         top: 0;
         right: 0;
     }
-    .trend-cards li button:hover{
+    .trend-cards li button:hover, .profile-card > button > span > svg:hover{
         background-color: #bfdaea;
     }
-    .trend-cards li button span svg{
+    .trend-cards li button span svg, .profile-card > button > span > svg{
         width: 2rem;
     }
     .trend-cards .show-more a, .follow-cards .show-more a{
         text-align: start;
     }
-    .follow-cards li{
+    .follow-cards li, .profile-card{
         margin-bottom: 1rem;
+        width: 100%;
         display: flex;
-        justify-content: space-around;
+        justify-content:flex-start;
         align-items: center;
+        position: relative;
+    }
+    .profile-card{
+        padding: 1rem 2rem;
+    }
+    .profile-card .user-data{
+        text-align: start;
+    }
+    .profile-card figure{
+        margin: 0 1rem 0 0;
+    }
+    .profile-card figure img{
+        width: 4rem;
+        height: 4rem;
+    }
+    .profile-card > button{
+        top: 1rem;
     }
     .follow-cards li > button{
         padding: 0 2rem;
@@ -627,7 +682,7 @@ main{
         display: flex;
         flex-direction: column;
     }
-    .follow-cards li .user-data a:first-child:hover, .links a:hover{
+    .follow-cards li .user-data a:first-child:hover, .links a:hover, .profile-card .user-data a:first-child:hover{
         text-decoration: underline;
     }
     .links{
