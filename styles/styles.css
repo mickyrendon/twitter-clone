@@ -707,6 +707,7 @@ main{
     }
     .profile-card{
         padding: 1rem 2rem;
+        justify-content: flex-start;
     }
     .profile-card .user-data{
         text-align: start;
