@@ -6,6 +6,11 @@
     --outline-img: #d5d8d8d0;
     --primary: #1d9bf0;
     --primary-h: #1789d4ed;
+    --light-blue:#c4e3f8; ;
+    --light-green:rgb(209, 250, 237);
+    --green:rgb(0, 186, 124);
+    --light-red:rgb(250, 220, 234);
+    --red:rgb(249, 24, 128);
     --bck-white: #ffffff;
     --bck-secondary: #eff3f4;
     --hover: #dee5e9;
@@ -191,25 +196,67 @@ main{
     font-weight: 600;
     color: var(--p);
 }
-.reactions-ctr{
+.reactions-ctr ul{
+    width: 100%;
+    display: flex;
     justify-content: space-between;
 }
-.reactions-ctr button{
-    width: 6rem;
-    height: 2rem;
+.reactions-ctr ul li{
+    /* width: 6rem; */
+    /* height: 2rem; */
+    display: flex;
     justify-content: space-evenly;
     align-items: center;
     background: none;
     border: none;
     color: var(--p-secondary);
 }
-.reactions-ctr button:hover{
-    cursor: pointer;
-}
-.reactions-ctr button svg{
-    width: 2rem;
-    height: 2rem;
+.reactions-ctr ul li button{
+    padding: 1rem;
+    overflow: hidden;
+    border-radius: 50%;
     fill: var(--p-secondary);
+}
+.reactions-ctr ul li button svg{
+    width: 2rem;
+}
+.reactions-ctr ul li span{
+    display: none;
+}
+.reactions-ctr ul li button:hover{
+    cursor: pointer;
+    background-color: var(--light-blue);
+    border-radius: var(--circle);
+    text-align: center;
+    transition-property: background-color;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in;
+}
+.reactions-ctr ul .comments:hover button{
+    fill: var(--primary);;
+}
+.reactions-ctr ul .comments:hover span{
+    color: var(--primary);
+}
+.reactions-ctr ul .retweet:hover button{
+    background-color: var(--light-green);
+    fill: var(--green);
+}
+.reactions-ctr ul .retweet:hover span{
+    color: var(--green);
+}
+.reactions-ctr ul .likes:hover button{
+    background-color: var(--light-red);
+    fill: var(--red);
+}
+.reactions-ctr ul .likes:hover span{
+    color: var(--red);
+}
+.reactions-ctr ul .share:hover button{
+    fill: var(--primary);
+}
+.reactions-ctr ul .share:hover span{
+    color: var(--primary);
 }
 /* menu bottom */
 .bottom-menu{
@@ -338,6 +385,10 @@ main{
         max-width: 60rem;
         border-left: 1px solid var(--outline-img);
         border-right: 1px solid var(--outline-img);
+    }
+    .reactions-ctr ul li span{
+        display: flex;
+        font-size: var(--sm);
     }
     .aside-menu{
         padding-top: 2rem;
@@ -494,8 +545,8 @@ main{
     .bottom-menu-list{
         align-items: flex-end;
     }
-    .aside-icon{
-        align-self: flex-end;
+    .aside-menu{
+        align-items: flex-end;
 
     }
 }
@@ -647,7 +698,7 @@ main{
         margin-bottom: 1rem;
         width: 100%;
         display: flex;
-        justify-content:flex-start;
+        justify-content:space-between;
         align-items: center;
         position: relative;
     }
