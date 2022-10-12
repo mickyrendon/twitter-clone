@@ -351,6 +351,9 @@ main{
     border:1px solid var(--hover);
     border-radius: 3rem;
 }
+.show{
+    display: flex;
+}
 
 @media (min-width: 540px) {
     body{
@@ -528,7 +531,7 @@ main{
         height: 2rem;
         fill: var(--primary);
     }
-    .multimedia-btns button{
+    .tweeting-btn{
         padding: 1rem 2rem;
         font-size: var(--md);
         font-weight: 700;
@@ -537,7 +540,7 @@ main{
         opacity: 0.6;
         border-radius: 4rem;
     }
-    .multimedia-btns button::after{
+    .active{
         opacity: 1;
     }
 }
