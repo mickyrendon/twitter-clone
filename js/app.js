@@ -15,7 +15,11 @@ validator()
 // /////////////////////////////////////////////////////////
 // TODO:recorrer el array para clickear cualquier btn y abrir el menu
 const menuDots = document.querySelectorAll('.menu-dots-a')
-menuDots.addEventListener('click', checkStyle)
+menuDots.forEach((e)  => {
+    e.addEventListener('click', checkStyle)
+
+})
+
 
 function checkStyle(){
     const menuOpts = document.querySelector('.opts-menu')
