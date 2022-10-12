@@ -75,7 +75,7 @@ select{
     align-items: center;
     position: fixed;
 }
-.input-sctn, .searcher-ctr, .bottom-menu .lists-ctr .bottom-menu-list li button span, .hashtag, .profile-card .user-data, .profile-card button{
+.input-sctn, .searcher-ctr, .bottom-menu .lists-ctr .bottom-menu-list li button span, .hashtag svg:nth-child(2), .profile-card .user-data, .profile-card button{
     display: none;
 }
 .icon-card img, .f-cards-icon img{
@@ -94,7 +94,9 @@ select{
     font-weight:700;
     color: var(--title);
 }
-
+.links-ctr a:first-child:hover{
+    text-decoration: underline;
+}
 /* specific rules */
 .menu-top{
     top: 0;
@@ -574,7 +576,7 @@ main{
     .hashtag svg:first-child, .lists-ctr .bottom-menu-list .fxd-btn .blue-btn > svg{
         display: none;
     }
-    .hashtag svg:last-child, .lists-ctr .bottom-menu-list .fxd-btn .blue-btn > span, .bottom-menu .lists-ctr .bottom-menu-list li button span, .hashtag, .profile-card .user-data, .profile-card button{
+    .hashtag svg:nth-child(2), .lists-ctr .bottom-menu-list .fxd-btn .blue-btn > span, .bottom-menu .lists-ctr .bottom-menu-list li button span, .hashtag, .profile-card .user-data, .profile-card button{
         display: flex;
     }
     .selected{
