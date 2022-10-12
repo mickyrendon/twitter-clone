@@ -13,7 +13,8 @@ function validator(){
 }
 validator()
 // /////////////////////////////////////////////////////////
-const menuDots = document.querySelector('.menu-dots-a')
+// TODO:recorrer el array para clickear cualquier btn y abrir el menu
+const menuDots = document.querySelectorAll('.menu-dots-a')
 menuDots.addEventListener('click', checkStyle)
 
 function checkStyle(){

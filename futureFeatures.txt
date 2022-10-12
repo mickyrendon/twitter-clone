@@ -1,2 +1,2 @@
-#mobile 
-    -messages dropup desktop 
+#desktop
+    -menu chat
